@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 基础meta标签 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO优化meta标签 -->
+    <title>Puzzle Games - Challenge Your Mind | GameRival.online</title>
+    <meta name="description" content="Discover amazing puzzle games that challenge your mind and improve problem-solving skills. Play brain-teasing games like Boom Karts and Empire City for free.">
+    <meta name="keywords" content="puzzle games, brain games, logic games, strategy games, mind games, online puzzles, free puzzle games">
+    <meta name="author" content="GameRival.online">
+    
+    <!-- Open Graph标签 -->
+    <meta property="og:title" content="Puzzle Games - Challenge Your Mind | GameRival.online">
+    <meta property="og:description" content="Play the best puzzle games online. Challenge your brain with our collection of mind-bending puzzles and strategy games.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gamerival.online/puzzle-games.html">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gamerival.online/puzzle-games.html">
+    
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Plausible Analytics -->
+    <script defer data-domain="gamerival.online" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+    <!-- 网站头部导航 -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <!-- 网站Logo -->
+                <a href="index.html" class="logo">GameRival.online</a>
+                
+                <!-- 移动端菜单按钮 -->
+                <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+                
+                <!-- 主导航菜单 -->
+                <nav>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="puzzle-games.html" class="active">Puzzle Games</a></li>
+                        <li><a href="sports-games.html">Sports Games</a></li>
+                        <li><a href="action-games.html">Action Games</a></li>
+                        <li><a href="#shooting">Shooting Games</a></li>
+                        <li><a href="#strategy">Strategy Games</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <div class="container">
+            <!-- 分类页面标题 -->
+            <section class="category-header">
+                <h1>Puzzle Games</h1>
+                <p>Challenge your mind and enhance your problem-solving skills with our carefully curated collection of puzzle games. From strategic thinking to creative solutions, these games will keep your brain engaged and entertained.</p>
+            </section>
+
+            <!-- 益智游戏展示区域 -->
+            <section class="games-section">
+                <h2>Featured Puzzle Games</h2>
+                <div class="games-grid">
+                    <!-- Boom Karts游戏卡片 -->
+                    <article class="game-card">
+                        <h2>Boom Karts</h2>
+                        <p class="game-description">Navigate through challenging tracks while strategically using power-ups and avoiding obstacles. This kart racing game combines speed with tactical thinking, making every race a puzzle to solve.</p>
+                        <iframe class="game-preview" src="https://games.crazygames.com/en_US/boom-karts/index.html" loading="lazy" title="Boom Karts Puzzle Racing Game"></iframe>
+                        <a href="boom-karts.html" class="btn">Play Full Game</a>
+                    </article>
+
+                    <!-- Empire City游戏卡片 -->
+                    <article class="game-card">
+                        <h2>Empire City</h2>
+                        <p class="game-description">Plan and build your dream metropolis in this strategic city-building puzzle game. Balance resources, plan infrastructure, and solve urban development challenges to create a thriving empire.</p>
+                        <iframe class="game-preview" src="https://games.crazygames.com/en_US/empire-city/index.html" loading="lazy" title="Empire City Strategy Building Game"></iframe>
+                        <a href="empire-city.html" class="btn">Play Full Game</a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 益智游戏分类说明 -->
+            <section class="category-info">
+                <h2>About Puzzle Games</h2>
+                <div class="games-grid">
+                    <div class="game-card">
+                        <h2>🧠 Brain Training</h2>
+                        <p class="game-description">Puzzle games are excellent for cognitive development, improving memory, concentration, and analytical thinking skills through engaging gameplay.</p>
+                    </div>
+                    
+                    <div class="game-card">
+                        <h2>🎯 Strategic Thinking</h2>
+                        <p class="game-description">Develop strategic planning abilities as you solve complex problems and make decisions that affect game outcomes and progression.</p>
+                    </div>
+                    
+                    <div class="game-card">
+                        <h2>🏆 Achievement System</h2>
+                        <p class="game-description">Progress through challenging levels and unlock achievements as you master different puzzle mechanics and strategies.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 游戏提示和技巧 -->
+            <section class="tips-section">
+                <h2>Puzzle Game Tips & Strategies</h2>
+                <div class="game-card">
+                    <h2>Master These Puzzle Gaming Techniques</h2>
+                    <p class="game-description"><strong>Think Ahead:</strong> Always plan your moves several steps in advance. Consider the consequences of each action before making decisions.</p>
+                    <p class="game-description"><strong>Pattern Recognition:</strong> Look for recurring patterns and use them to predict solutions. Most puzzles have underlying logic systems.</p>
+                    <p class="game-description"><strong>Resource Management:</strong> In strategy-based puzzle games, efficiently manage your resources and prioritize high-impact actions.</p>
+                    <p class="game-description"><strong>Practice Patience:</strong> Complex puzzles require time and patience. Don't rush - take breaks if you get stuck and return with fresh perspective.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 网站页脚 -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 GameRival.online. All rights reserved. | Premium Online Gaming Platform</p>
+            <p>Challenge your mind with the best puzzle games available online.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript功能 -->
+    <script>
+        // 移动端菜单切换功能
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // 点击外部关闭移动端菜单
+        document.addEventListener('click', function(e) {
+            const navMenu = document.getElementById('navMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!navMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html> 

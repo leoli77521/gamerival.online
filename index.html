@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 基础meta标签 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO优化meta标签 -->
+    <title>GameRival.online - Best Online Games Platform | Play Free Games Now</title>
+    <meta name="description" content="GameRival.online is the ultimate online gaming platform featuring puzzle games, sports games, action games and more. Play free games instantly without downloads.">
+    <meta name="keywords" content="online games, free games, puzzle games, sports games, action games, browser games, gaming platform">
+    <meta name="author" content="GameRival.online">
+    
+    <!-- Open Graph标签 -->
+    <meta property="og:title" content="GameRival.online - Best Online Games Platform">
+    <meta property="og:description" content="Play amazing free online games instantly. From puzzle to sports games, find your favorite game on GameRival.online">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gamerival.online/">
+    <meta property="og:site_name" content="GameRival.online">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gamerival.online/">
+    
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Plausible Analytics -->
+    <script defer data-domain="gamerival.online" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+    <!-- 网站头部导航 -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <!-- 网站Logo -->
+                <a href="index.html" class="logo">GameRival.online</a>
+                
+                <!-- 移动端菜单按钮 -->
+                <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+                
+                <!-- 主导航菜单 -->
+                <nav>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="puzzle-games.html">Puzzle Games</a></li>
+                        <li><a href="sports-games.html">Sports Games</a></li>
+                        <li><a href="action-games.html">Action Games</a></li>
+                        <li><a href="#shooting">Shooting Games</a></li>
+                        <li><a href="#strategy">Strategy Games</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <div class="container">
+            <!-- 页面标题和介绍 -->
+            <section class="page-title">
+                <h1>Welcome to GameRival.online</h1>
+                <p>Discover the ultimate online gaming experience with our collection of free, high-quality games. From mind-bending puzzles to exciting sports action, find your next favorite game today.</p>
+            </section>
+
+            <!-- 搜索功能区域 -->
+            <section class="search-section">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search for games..." id="searchInput">
+                    <button class="search-btn" onclick="searchGames()">Search</button>
+                </div>
+            </section>
+
+            <!-- 精选游戏展示区域 -->
+            <section class="featured-games">
+                <h2>Featured Games</h2>
+                <div class="games-grid">
+                    <!-- Boom Karts游戏卡片 -->
+                    <article class="game-card">
+                        <h2>Boom Karts</h2>
+                        <p class="game-description">Experience high-speed kart racing with explosive action and thrilling tracks. Race against opponents while collecting power-ups and avoiding obstacles in this adrenaline-pumping racing game.</p>
+                        <iframe class="game-preview" src="https://games.crazygames.com/en_US/boom-karts/index.html" loading="lazy" title="Boom Karts Game Preview"></iframe>
+                        <a href="boom-karts.html" class="btn">Play Full Game</a>
+                    </article>
+
+                    <!-- Empire City游戏卡片 -->
+                    <article class="game-card">
+                        <h2>Empire City</h2>
+                        <p class="game-description">Build and manage your own metropolitan empire in this engaging city-building strategy game. Plan urban development, manage resources, and create the ultimate modern cityscape.</p>
+                        <iframe class="game-preview" src="https://games.crazygames.com/en_US/empire-city/index.html" loading="lazy" title="Empire City Game Preview"></iframe>
+                        <a href="empire-city.html" class="btn">Play Full Game</a>
+                    </article>
+
+                    <!-- Basketball Superstars游戏卡片 -->
+                    <article class="game-card">
+                        <h2>Basketball Superstars</h2>
+                        <p class="game-description">Dominate the basketball court in this exciting sports game featuring realistic gameplay, amazing graphics, and competitive matches against skilled opponents.</p>
+                        <iframe class="game-preview" src="https://games.crazygames.com/en_US/basketball-superstars/index.html" loading="lazy" title="Basketball Superstars Game Preview"></iframe>
+                        <a href="basketball-superstars.html" class="btn">Play Full Game</a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 游戏分类导航 -->
+            <section class="categories-section">
+                <h2>Game Categories</h2>
+                <div class="games-grid">
+                    <div class="game-card">
+                        <h2>Puzzle Games</h2>
+                        <p class="game-description">Challenge your mind with our collection of brain-teasing puzzle games that will test your logic, strategy, and problem-solving skills.</p>
+                        <a href="puzzle-games.html" class="btn">Explore Puzzle Games</a>
+                    </div>
+                    
+                    <div class="game-card">
+                        <h2>Sports Games</h2>
+                        <p class="game-description">Experience the thrill of competition with our sports games featuring basketball, soccer, racing, and many other exciting athletic challenges.</p>
+                        <a href="sports-games.html" class="btn">Explore Sports Games</a>
+                    </div>
+                    
+                    <div class="game-card">
+                        <h2>Action Games</h2>
+                        <p class="game-description">Get your adrenaline pumping with fast-paced action games full of excitement, challenges, and non-stop entertainment.</p>
+                        <a href="action-games.html" class="btn">Explore Action Games</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 网站特色介绍 -->
+            <section class="features-section">
+                <h2>Why Choose GameRival.online?</h2>
+                <div class="games-grid">
+                    <div class="game-card">
+                        <h2>🎮 Instant Play</h2>
+                        <p class="game-description">No downloads required! All our games run directly in your browser, giving you instant access to entertainment.</p>
+                    </div>
+                    
+                    <div class="game-card">
+                        <h2>📱 Cross-Platform</h2>
+                        <p class="game-description">Enjoy seamless gaming experience across all devices - desktop, tablet, and mobile. Play anywhere, anytime.</p>
+                    </div>
+                    
+                    <div class="game-card">
+                        <h2>🆓 Completely Free</h2>
+                        <p class="game-description">All games are completely free to play with no hidden costs, subscriptions, or premium restrictions.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 网站页脚 -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 GameRival.online. All rights reserved. | Premium Online Gaming Platform</p>
+            <p>Experience the best free online games with high-quality graphics and engaging gameplay.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript功能 -->
+    <script>
+        // 移动端菜单切换功能
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // 搜索功能
+        function searchGames() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
+            
+            if (searchTerm === '') {
+                alert('Please enter a game name or keyword to search.');
+                return;
+            }
+
+            // 简单的搜索逻辑 - 重定向到相关游戏页面
+            if (searchTerm.includes('boom') || searchTerm.includes('kart')) {
+                window.location.href = 'boom-karts.html';
+            } else if (searchTerm.includes('empire') || searchTerm.includes('city')) {
+                window.location.href = 'empire-city.html';
+            } else if (searchTerm.includes('basketball') || searchTerm.includes('sport')) {
+                window.location.href = 'basketball-superstars.html';
+            } else if (searchTerm.includes('unity') || searchTerm.includes('adventure')) {
+                window.location.href = 'unity-action-adventure.html';
+            } else if (searchTerm.includes('runner') || searchTerm.includes('fast')) {
+                window.location.href = 'fast-action-runner.html';
+            } else if (searchTerm.includes('combat') || searchTerm.includes('arena') || searchTerm.includes('fighting')) {
+                window.location.href = 'combat-arena.html';
+            } else if (searchTerm.includes('shooter') || searchTerm.includes('3d') || searchTerm.includes('shooting')) {
+                window.location.href = '3d-action-shooter.html';
+            } else if (searchTerm.includes('puzzle')) {
+                window.location.href = 'puzzle-games.html';
+            } else if (searchTerm.includes('sports')) {
+                window.location.href = 'sports-games.html';
+            } else if (searchTerm.includes('action')) {
+                window.location.href = 'action-games.html';
+            } else {
+                alert('Game not found. Try searching for: Boom Karts, Empire City, Basketball, Unity Adventure, Combat Arena, 3D Shooter, or game categories like Action, Puzzle, Sports.');
+            }
+        }
+
+        // 搜索框回车键支持
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchGames();
+            }
+        });
+
+        // 点击外部关闭移动端菜单
+        document.addEventListener('click', function(e) {
+            const navMenu = document.getElementById('navMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!navMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html> 
