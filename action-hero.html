@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 基础meta标签 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO优化meta标签 -->
+    <title>Action Hero - Unity Adventure Game | GameRival.online</title>
+    <meta name="description" content="Become the ultimate action hero in this Unity-powered adventure game. Fight through waves of enemies, unlock powerful weapons, and save the world in this epic action experience.">
+    <meta name="keywords" content="action hero, unity game, adventure game, action shooter, online game, 3D action">
+    <meta name="author" content="GameRival.online">
+    
+    <!-- Open Graph标签 -->
+    <meta property="og:title" content="Action Hero - Unity Adventure Game">
+    <meta property="og:description" content="Epic Unity-powered action adventure with intense combat and stunning graphics">
+    <meta property="og:type" content="game">
+    <meta property="og:url" content="https://gamerival.online/action-hero.html">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gamerival.online/action-hero.html">
+    
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Plausible Analytics -->
+    <script defer data-domain="gamerival.online" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+    <!-- 网站头部导航 -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <!-- 网站Logo -->
+                <a href="index.html" class="logo">GameRival.online</a>
+                
+                <!-- 移动端菜单按钮 -->
+                <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+                
+                <!-- 主导航菜单 -->
+                <nav>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="puzzle-games.html">Puzzle Games</a></li>
+                        <li><a href="sports-games.html">Sports Games</a></li>
+                        <li><a href="action-games.html">Action Games</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <div class="container">
+            <!-- 返回按钮 -->
+            <div class="back-btn">
+                <a href="action-games.html" class="btn btn-secondary">← Back to Action Games</a>
+            </div>
+
+            <!-- 游戏详情 -->
+            <section class="game-detail">
+                <h1>Action Hero</h1>
+                
+                <p>Step into the boots of the ultimate action hero in this thrilling Unity-powered adventure game. Face overwhelming odds, battle through hordes of enemies, and use an arsenal of powerful weapons to save the world from destruction.</p>
+                
+                <!-- 游戏iframe -->
+                <iframe class="game-iframe" 
+                        src="https://games.crazygames.com/en_US/action-hero/index.html" 
+                        title="Action Hero - Unity Adventure Game" 
+                        loading="lazy">
+                </iframe>
+                
+                <h2>Game Features</h2>
+                <p><strong>🎮 Unity Technology:</strong> Experience cutting-edge graphics and smooth gameplay powered by Unity engine, delivering console-quality gaming in your browser.</p>
+                
+                <p><strong>⚔️ Combat System:</strong> Master an intuitive combat system with combo attacks, special abilities, and tactical positioning to overcome challenging enemies.</p>
+                
+                <p><strong>🔫 Weapon Arsenal:</strong> Collect and upgrade a diverse range of weapons, from melee combat tools to high-tech firearms, each with unique abilities and upgrade paths.</p>
+                
+                <p><strong>🌍 Epic Adventure:</strong> Journey through multiple environments and face increasingly difficult challenges as you progress through the hero's journey.</p>
+                
+                <h2>How to Play</h2>
+                <p><strong>Movement:</strong> Use WASD keys or arrow keys to move your character around the battlefield. Master movement to dodge enemy attacks and position yourself strategically.</p>
+                
+                <p><strong>Combat:</strong> Left click to attack with your primary weapon. Right click for special abilities or secondary attacks. Time your attacks and learn enemy patterns.</p>
+                
+                <p><strong>Weapons:</strong> Collect weapon pickups scattered throughout levels. Each weapon has different damage, range, and special properties. Experiment to find your favorite loadout.</p>
+                
+                <p><strong>Objectives:</strong> Complete mission objectives to progress through the game. Objectives range from eliminating all enemies to rescuing civilians and protecting key locations.</p>
+                
+                <h2>Pro Tips</h2>
+                <p><strong>⚡ Master the Dodge:</strong> Timing is everything in Action Hero. Learn to dodge enemy attacks by moving at the right moment. A well-timed dodge can save your life.</p>
+                
+                <p><strong>🎯 Use Cover:</strong> Take advantage of environmental cover to protect yourself from enemy fire. Pop out to attack, then return to cover to avoid retaliation.</p>
+                
+                <p><strong>🔄 Combo Attacks:</strong> Chain your attacks together for maximum damage. Different weapon combinations create powerful combo effects.</p>
+                
+                <p><strong>💡 Resource Management:</strong> Conserve ammo and health items for challenging encounters. Don't waste resources on easy enemies.</p>
+                
+                <h2>Technical Specifications</h2>
+                <p><strong>Platform:</strong> Web Browser (Unity WebGL)</p>
+                <p><strong>Controls:</strong> Keyboard and Mouse</p>
+                <p><strong>Graphics:</strong> 3D Unity Engine</p>
+                <p><strong>Audio:</strong> Immersive Sound Effects and Music</p>
+                <p><strong>Performance:</strong> Optimized for smooth gameplay at 60 FPS</p>
+                
+                <h2>Game Modes</h2>
+                <p><strong>🎯 Campaign Mode:</strong> Follow the epic storyline as you progress through challenging levels and face increasingly difficult enemies.</p>
+                
+                <p><strong>🏆 Survival Mode:</strong> Test your skills against endless waves of enemies. How long can you survive?</p>
+                
+                <p><strong>⚡ Challenge Mode:</strong> Complete special objectives under unique conditions for bonus rewards and bragging rights.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- 网站页脚 -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 GameRival.online. All rights reserved. | Premium Online Gaming Platform</p>
+            <p>Experience the ultimate action hero adventure with stunning Unity graphics and intense gameplay.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript功能 -->
+    <script>
+        // 移动端菜单切换功能
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        // 点击外部关闭移动端菜单
+        document.addEventListener('click', function(e) {
+            const navMenu = document.getElementById('navMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!navMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html> 

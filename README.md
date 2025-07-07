@@ -91,6 +91,12 @@ GameRival.online 是一个专业的多页面在线游戏平台，提供各类游
 5. **Fast Action Runner** - 高速跑酷游戏
 6. **Combat Arena** - 格斗竞技场游戏
 7. **3D Action Shooter** - WebGL技术的3D射击游戏
+8. **Action Hero** - Unity技术的英雄冒险游戏
+9. **Ninja Warrior** - HTML5忍者潜行动作游戏
+10. **Space Shooter** - WebGL太空战斗射击游戏
+11. **Battle Royale** - HTML5多人战斗生存游戏
+12. **Zombie Survival** - 僵尸末日生存防御游戏
+13. **Platformer Adventure** - WebGL经典平台跳跃游戏
 
 ### 🚀 网站特色
 - **即时游戏体验**: 无需下载，浏览器直接运行
@@ -99,6 +105,8 @@ GameRival.online 是一个专业的多页面在线游戏平台，提供各类游
 - **现代化设计**: 采用苹果典型色系，简洁优雅
 - **用户友好**: 直观的导航和搜索功能
 - **数据分析**: 集成Plausible Analytics，隐私友好的网站数据分析
+- **错误处理**: 智能游戏加载错误检测和备用源切换
+- **故障排除**: 完整的帮助中心，解决常见问题
 
 ### 📁 项目文件说明
 
@@ -116,9 +124,16 @@ GameRival.online 是一个专业的多页面在线游戏平台，提供各类游
 - `fast-action-runner.html` - Fast Action Runner游戏详情页
 - `combat-arena.html` - Combat Arena游戏详情页
 - `3d-action-shooter.html` - 3D Action Shooter游戏详情页
+- `action-hero.html` - Action Hero游戏详情页
+- `ninja-warrior.html` - Ninja Warrior游戏详情页
+- `space-shooter.html` - Space Shooter游戏详情页
+- `battle-royale.html` - Battle Royale游戏详情页
+- `zombie-survival.html` - Zombie Survival游戏详情页
+- `platformer-adventure.html` - Platformer Adventure游戏详情页
 
 #### 样式和文档
 - `styles.css` - 主要样式文件（响应式设计）
+- `help.html` - 帮助中心页面（故障排除指南）
 - `README.md` - 项目说明文档
 
 ### 🌐 部署说明
@@ -126,6 +141,36 @@ GameRival.online 是一个专业的多页面在线游戏平台，提供各类游
 2. 确保域名 gamerival.online 正确指向网站
 3. 验证所有页面的iframe游戏可正常加载
 4. 测试响应式设计在不同设备上的表现
+
+### 🔧 问题解决和优化 (2024年优化)
+
+#### 解决"找不到合理片段"错误
+- **问题诊断**: 游戏iframe加载失败、网络连接问题、跨域限制
+- **解决方案**: 
+  - 添加智能错误检测机制
+  - 提供多个备用游戏源
+  - 创建详细的故障排除指南
+  - 优化用户体验和错误提示
+
+#### 新增功能
+- **帮助中心**: 完整的故障排除指南 (`help.html`)
+- **错误处理**: 自动检测游戏加载失败并提供备用选项
+- **中文支持**: 帮助内容本地化，便于用户理解
+- **交互优化**: 改善用户在遇到问题时的体验
+- **扩展游戏库**: 新增6款动作游戏，涵盖多种技术和游戏类型
+
+#### 2024年12月新增游戏
+1. **Action Hero** - Unity技术英雄冒险游戏，包含武器系统和升级机制
+2. **Ninja Warrior** - HTML5忍者潜行游戏，注重策略和敏捷性
+3. **Space Shooter** - WebGL太空射击游戏，具有3D图形和飞船升级
+4. **Battle Royale** - HTML5多人战斗游戏，生存竞技模式
+5. **Zombie Survival** - 僵尸生存游戏，建设防御和资源管理
+6. **Platformer Adventure** - WebGL平台跳跃游戏，经典游戏机制
+
+#### 技术改进
+- **JavaScript增强**: 添加游戏加载状态检测
+- **CSS优化**: 新增错误消息样式和帮助页面样式
+- **用户引导**: 提供清晰的解决步骤和技术支持
 
 ### 未来扩展计划
 - 添加更多游戏分类（射击游戏、策略游戏专门分类）

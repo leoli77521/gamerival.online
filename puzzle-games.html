@@ -47,8 +47,7 @@
                         <li><a href="puzzle-games.html" class="active">Puzzle Games</a></li>
                         <li><a href="sports-games.html">Sports Games</a></li>
                         <li><a href="action-games.html">Action Games</a></li>
-                        <li><a href="#shooting">Shooting Games</a></li>
-                        <li><a href="#strategy">Strategy Games</a></li>
+                        <li><a href="help.html">Help Center</a></li>
                     </ul>
                 </nav>
             </div>
@@ -72,7 +71,22 @@
                     <article class="game-card">
                         <h2>Boom Karts</h2>
                         <p class="game-description">Navigate through challenging tracks while strategically using power-ups and avoiding obstacles. This kart racing game combines speed with tactical thinking, making every race a puzzle to solve.</p>
-                        <iframe class="game-preview" src="https://games.crazygames.com/en_US/boom-karts/index.html" loading="lazy" title="Boom Karts Puzzle Racing Game"></iframe>
+                        
+                        <!-- 游戏预览区域 -->
+                        <div class="game-preview-container">
+                            <iframe class="game-preview" 
+                                    src="https://games.crazygames.com/en_US/boom-karts/index.html" 
+                                    loading="lazy" 
+                                    title="Boom Karts Puzzle Racing Game"
+                                    onload="handleGameLoad(this)"
+                                    onerror="handleGameError(this)"></iframe>
+                            <div class="game-error-message" style="display: none;">
+                                <p>🎮 游戏加载中...</p>
+                                <p>如果游戏无法显示，请点击下方按钮尝试其他游戏源</p>
+                                <button onclick="loadAlternativeGame(this, 'boom-karts')" class="btn btn-secondary">尝试其他游戏源</button>
+                            </div>
+                        </div>
+                        
                         <a href="boom-karts.html" class="btn">Play Full Game</a>
                     </article>
 
@@ -80,7 +94,22 @@
                     <article class="game-card">
                         <h2>Empire City</h2>
                         <p class="game-description">Plan and build your dream metropolis in this strategic city-building puzzle game. Balance resources, plan infrastructure, and solve urban development challenges to create a thriving empire.</p>
-                        <iframe class="game-preview" src="https://games.crazygames.com/en_US/empire-city/index.html" loading="lazy" title="Empire City Strategy Building Game"></iframe>
+                        
+                        <!-- 游戏预览区域 -->
+                        <div class="game-preview-container">
+                            <iframe class="game-preview" 
+                                    src="https://games.crazygames.com/en_US/empire-city/index.html" 
+                                    loading="lazy" 
+                                    title="Empire City Strategy Building Game"
+                                    onload="handleGameLoad(this)"
+                                    onerror="handleGameError(this)"></iframe>
+                            <div class="game-error-message" style="display: none;">
+                                <p>🎮 游戏加载中...</p>
+                                <p>如果游戏无法显示，请点击下方按钮尝试其他游戏源</p>
+                                <button onclick="loadAlternativeGame(this, 'empire-city')" class="btn btn-secondary">尝试其他游戏源</button>
+                            </div>
+                        </div>
+                        
                         <a href="empire-city.html" class="btn">Play Full Game</a>
                     </article>
                 </div>
@@ -131,6 +160,65 @@
 
     <!-- JavaScript功能 -->
     <script>
+        // 游戏备用链接
+        const gameAlternatives = {
+            'boom-karts': [
+                'https://www.crazygames.com/embed/boom-karts',
+                'https://games.poki.com/en/g/boom-karts',
+                'https://www.y8.com/embed/boom_karts'
+            ],
+            'empire-city': [
+                'https://www.crazygames.com/embed/empire-city',
+                'https://games.poki.com/en/g/empire-city',
+                'https://www.y8.com/embed/empire_city'
+            ]
+        };
+
+        // 游戏加载成功处理
+        function handleGameLoad(iframe) {
+            // 游戏加载成功，隐藏错误消息
+            const errorMessage = iframe.parentElement.querySelector('.game-error-message');
+            if (errorMessage) {
+                errorMessage.style.display = 'none';
+            }
+            iframe.style.display = 'block';
+        }
+
+        // 游戏加载失败处理
+        function handleGameError(iframe) {
+            // 显示错误消息
+            const errorMessage = iframe.parentElement.querySelector('.game-error-message');
+            if (errorMessage) {
+                errorMessage.style.display = 'block';
+            }
+            iframe.style.display = 'none';
+        }
+
+        // 加载备用游戏
+        function loadAlternativeGame(button, gameId) {
+            const gameCard = button.closest('.game-card');
+            const iframe = gameCard.querySelector('.game-preview');
+            const alternatives = gameAlternatives[gameId];
+            
+            if (alternatives && alternatives.length > 0) {
+                // 尝试第一个备用链接
+                const alternativeUrl = alternatives[0];
+                iframe.src = alternativeUrl;
+                
+                // 更新按钮文本
+                button.textContent = '正在加载备用游戏...';
+                button.disabled = true;
+                
+                // 3秒后恢复按钮
+                setTimeout(() => {
+                    button.textContent = '尝试其他游戏源';
+                    button.disabled = false;
+                }, 3000);
+            } else {
+                alert('暂时没有可用的备用游戏源，请稍后再试。');
+            }
+        }
+
         // 移动端菜单切换功能
         function toggleMenu() {
             const navMenu = document.getElementById('navMenu');
@@ -145,6 +233,26 @@
             if (!navMenu.contains(e.target) && !menuBtn.contains(e.target)) {
                 navMenu.classList.remove('active');
             }
+        });
+
+        // 页面加载完成后检查游戏加载状态
+        document.addEventListener('DOMContentLoaded', function() {
+            // 延迟检查游戏加载状态
+            setTimeout(() => {
+                const iframes = document.querySelectorAll('.game-preview');
+                iframes.forEach(iframe => {
+                    // 检查iframe是否加载成功
+                    try {
+                        if (iframe.contentDocument === null) {
+                            // iframe可能被阻止加载
+                            handleGameError(iframe);
+                        }
+                    } catch (e) {
+                        // 跨域错误，这是正常的，游戏应该能正常显示
+                        console.log('跨域访问限制，这是正常现象');
+                    }
+                });
+            }, 3000);
         });
     </script>
 </body>

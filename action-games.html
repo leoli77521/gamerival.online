@@ -47,8 +47,7 @@
                         <li><a href="puzzle-games.html">Puzzle Games</a></li>
                         <li><a href="sports-games.html">Sports Games</a></li>
                         <li><a href="action-games.html" class="active">Action Games</a></li>
-                        <li><a href="#shooting">Shooting Games</a></li>
-                        <li><a href="#strategy">Strategy Games</a></li>
+                        <li><a href="help.html">Help Center</a></li>
                     </ul>
                 </nav>
             </div>
@@ -72,7 +71,22 @@
                     <article class="game-card">
                         <h2>Unity Action Adventure</h2>
                         <p class="game-description">Embark on an epic action adventure built with Unity technology. Navigate through challenging environments, battle enemies, and solve puzzles in this immersive 3D action experience.</p>
-                        <iframe class="game-preview" src="https://www.crazygames.com/embed/umljv9y4h" loading="lazy" title="Unity Action Adventure Game"></iframe>
+                        
+                        <!-- 游戏预览区域 -->
+                        <div class="game-preview-container">
+                            <iframe class="game-preview" 
+                                    src="https://www.crazygames.com/embed/umljv9y4h" 
+                                    loading="lazy" 
+                                    title="Unity Action Adventure Game"
+                                    onload="handleGameLoad(this)"
+                                    onerror="handleGameError(this)"></iframe>
+                            <div class="game-error-message" style="display: none;">
+                                <p>🎮 游戏加载中...</p>
+                                <p>如果游戏无法显示，请点击下方按钮尝试其他游戏源</p>
+                                <button onclick="loadAlternativeGame(this, 'unity-action-adventure')" class="btn btn-secondary">尝试其他游戏源</button>
+                            </div>
+                        </div>
+                        
                         <a href="unity-action-adventure.html" class="btn">Play Full Game</a>
                     </article>
 
@@ -80,7 +94,22 @@
                     <article class="game-card">
                         <h2>Fast Action Runner</h2>
                         <p class="game-description">Experience lightning-fast action in this HTML5 runner game. Jump, slide, and dodge obstacles while collecting power-ups in this addictive endless running adventure.</p>
-                        <iframe class="game-preview" src="https://www.crazygames.com/embed/od683h8yf" loading="lazy" title="Fast Action Runner Game"></iframe>
+                        
+                        <!-- 游戏预览区域 -->
+                        <div class="game-preview-container">
+                            <iframe class="game-preview" 
+                                    src="https://www.crazygames.com/embed/od683h8yf" 
+                                    loading="lazy" 
+                                    title="Fast Action Runner Game"
+                                    onload="handleGameLoad(this)"
+                                    onerror="handleGameError(this)"></iframe>
+                            <div class="game-error-message" style="display: none;">
+                                <p>🎮 游戏加载中...</p>
+                                <p>如果游戏无法显示，请点击下方按钮尝试其他游戏源</p>
+                                <button onclick="loadAlternativeGame(this, 'fast-action-runner')" class="btn btn-secondary">尝试其他游戏源</button>
+                            </div>
+                        </div>
+                        
                         <a href="fast-action-runner.html" class="btn">Play Full Game</a>
                     </article>
 
@@ -88,7 +117,22 @@
                     <article class="game-card">
                         <h2>Combat Arena</h2>
                         <p class="game-description">Step into the ultimate combat arena where skill and strategy meet. Engage in intense battles with smooth HTML5 gameplay and responsive controls in this action-packed fighting game.</p>
-                        <iframe class="game-preview" src="https://www.crazygames.com/embed/v1n9d8abp" loading="lazy" title="Combat Arena Game"></iframe>
+                        
+                        <!-- 游戏预览区域 -->
+                        <div class="game-preview-container">
+                            <iframe class="game-preview" 
+                                    src="https://www.crazygames.com/embed/v1n9d8abp" 
+                                    loading="lazy" 
+                                    title="Combat Arena Game"
+                                    onload="handleGameLoad(this)"
+                                    onerror="handleGameError(this)"></iframe>
+                            <div class="game-error-message" style="display: none;">
+                                <p>🎮 游戏加载中...</p>
+                                <p>如果游戏无法显示，请点击下方按钮尝试其他游戏源</p>
+                                <button onclick="loadAlternativeGame(this, 'combat-arena')" class="btn btn-secondary">尝试其他游戏源</button>
+                            </div>
+                        </div>
+                        
                         <a href="combat-arena.html" class="btn">Play Full Game</a>
                     </article>
 
@@ -96,8 +140,167 @@
                     <article class="game-card">
                         <h2>3D Action Shooter</h2>
                         <p class="game-description">Immerse yourself in cutting-edge 3D action with WebGL technology. Experience realistic graphics, smooth gameplay, and intense shooting action in this modern combat game.</p>
-                        <iframe class="game-preview" src="https://www.crazygames.com/embed/zv2fc0hk2" loading="lazy" title="3D Action Shooter Game"></iframe>
+                        
+                        <!-- 游戏预览区域 -->
+                        <div class="game-preview-container">
+                            <iframe class="game-preview" 
+                                    src="https://www.crazygames.com/embed/zv2fc0hk2" 
+                                    loading="lazy" 
+                                    title="3D Action Shooter Game"
+                                    onload="handleGameLoad(this)"
+                                    onerror="handleGameError(this)"></iframe>
+                            <div class="game-error-message" style="display: none;">
+                                <p>🎮 游戏加载中...</p>
+                                <p>如果游戏无法显示，请点击下方按钮尝试其他游戏源</p>
+                                <button onclick="loadAlternativeGame(this, '3d-action-shooter')" class="btn btn-secondary">尝试其他游戏源</button>
+                            </div>
+                        </div>
+                        
                         <a href="3d-action-shooter.html" class="btn">Play Full Game</a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 新增更多动作游戏 -->
+            <section class="games-section">
+                <h2>More Action Games</h2>
+                <div class="games-grid">
+                    <!-- Action Hero游戏卡片 -->
+                    <article class="game-card">
+                        <h2>Action Hero</h2>
+                        <p class="game-description">Become the ultimate action hero in this Unity-powered adventure. Fight through waves of enemies, unlock powerful weapons, and save the world in this epic action game.</p>
+                        
+                        <!-- 游戏预览区域 -->
+                        <div class="game-preview-container">
+                            <iframe class="game-preview" 
+                                    src="https://games.crazygames.com/en_US/action-hero/index.html" 
+                                    loading="lazy" 
+                                    title="Action Hero Game"
+                                    onload="handleGameLoad(this)"
+                                    onerror="handleGameError(this)"></iframe>
+                            <div class="game-error-message" style="display: none;">
+                                <p>🎮 游戏加载中...</p>
+                                <p>如果游戏无法显示，请点击下方按钮尝试其他游戏源</p>
+                                <button onclick="loadAlternativeGame(this, 'action-hero')" class="btn btn-secondary">尝试其他游戏源</button>
+                            </div>
+                        </div>
+                        
+                        <a href="action-hero.html" class="btn">Play Full Game</a>
+                    </article>
+
+                    <!-- Ninja Warrior游戏卡片 -->
+                    <article class="game-card">
+                        <h2>Ninja Warrior</h2>
+                        <p class="game-description">Master the art of the ninja in this HTML5 action game. Use stealth, agility, and deadly weapons to complete challenging missions and defeat your enemies.</p>
+                        
+                        <!-- 游戏预览区域 -->
+                        <div class="game-preview-container">
+                            <iframe class="game-preview" 
+                                    src="https://games.crazygames.com/en_US/ninja-warrior/index.html" 
+                                    loading="lazy" 
+                                    title="Ninja Warrior Game"
+                                    onload="handleGameLoad(this)"
+                                    onerror="handleGameError(this)"></iframe>
+                            <div class="game-error-message" style="display: none;">
+                                <p>🎮 游戏加载中...</p>
+                                <p>如果游戏无法显示，请点击下方按钮尝试其他游戏源</p>
+                                <button onclick="loadAlternativeGame(this, 'ninja-warrior')" class="btn btn-secondary">尝试其他游戏源</button>
+                            </div>
+                        </div>
+                        
+                        <a href="ninja-warrior.html" class="btn">Play Full Game</a>
+                    </article>
+
+                    <!-- Space Shooter游戏卡片 -->
+                    <article class="game-card">
+                        <h2>Space Shooter</h2>
+                        <p class="game-description">Defend Earth from alien invasion in this WebGL space shooter. Pilot your spacecraft, upgrade your weapons, and blast through endless waves of enemies.</p>
+                        
+                        <!-- 游戏预览区域 -->
+                        <div class="game-preview-container">
+                            <iframe class="game-preview" 
+                                    src="https://games.crazygames.com/en_US/space-shooter/index.html" 
+                                    loading="lazy" 
+                                    title="Space Shooter Game"
+                                    onload="handleGameLoad(this)"
+                                    onerror="handleGameError(this)"></iframe>
+                            <div class="game-error-message" style="display: none;">
+                                <p>🎮 游戏加载中...</p>
+                                <p>如果游戏无法显示，请点击下方按钮尝试其他游戏源</p>
+                                <button onclick="loadAlternativeGame(this, 'space-shooter')" class="btn btn-secondary">尝试其他游戏源</button>
+                            </div>
+                        </div>
+                        
+                        <a href="space-shooter.html" class="btn">Play Full Game</a>
+                    </article>
+
+                    <!-- Battle Royale游戏卡片 -->
+                    <article class="game-card">
+                        <h2>Battle Royale</h2>
+                        <p class="game-description">Drop into the ultimate battle royale arena built with HTML5 technology. Survive, fight, and be the last player standing in this intense multiplayer action game.</p>
+                        
+                        <!-- 游戏预览区域 -->
+                        <div class="game-preview-container">
+                            <iframe class="game-preview" 
+                                    src="https://games.crazygames.com/en_US/battle-royale/index.html" 
+                                    loading="lazy" 
+                                    title="Battle Royale Game"
+                                    onload="handleGameLoad(this)"
+                                    onerror="handleGameError(this)"></iframe>
+                            <div class="game-error-message" style="display: none;">
+                                <p>🎮 游戏加载中...</p>
+                                <p>如果游戏无法显示，请点击下方按钮尝试其他游戏源</p>
+                                <button onclick="loadAlternativeGame(this, 'battle-royale')" class="btn btn-secondary">尝试其他游戏源</button>
+                            </div>
+                        </div>
+                        
+                        <a href="battle-royale.html" class="btn">Play Full Game</a>
+                    </article>
+
+                    <!-- Zombie Survival游戏卡片 -->
+                    <article class="game-card">
+                        <h2>Zombie Survival</h2>
+                        <p class="game-description">Survive the zombie apocalypse in this intense Flash-based action game. Gather resources, build defenses, and fight for your life against hordes of undead.</p>
+                        
+                        <!-- 游戏预览区域 -->
+                        <div class="game-preview-container">
+                            <iframe class="game-preview" 
+                                    src="https://games.crazygames.com/en_US/zombie-survival/index.html" 
+                                    loading="lazy" 
+                                    title="Zombie Survival Game"
+                                    onload="handleGameLoad(this)"
+                                    onerror="handleGameError(this)"></iframe>
+                            <div class="game-error-message" style="display: none;">
+                                <p>🎮 游戏加载中...</p>
+                                <p>如果游戏无法显示，请点击下方按钮尝试其他游戏源</p>
+                                <button onclick="loadAlternativeGame(this, 'zombie-survival')" class="btn btn-secondary">尝试其他游戏源</button>
+                            </div>
+                        </div>
+                        
+                        <a href="zombie-survival.html" class="btn">Play Full Game</a>
+                    </article>
+
+                    <!-- Platformer Adventure游戏卡片 -->
+                    <article class="game-card">
+                        <h2>Platformer Adventure</h2>
+                        <p class="game-description">Jump, run, and explore in this classic platformer adventure. Collect coins, defeat enemies, and navigate through beautifully designed levels in this WebGL-powered game.</p>
+                        
+                        <!-- 游戏预览区域 -->
+                        <div class="game-preview-container">
+                            <iframe class="game-preview" 
+                                    src="https://games.crazygames.com/en_US/platformer-adventure/index.html" 
+                                    loading="lazy" 
+                                    title="Platformer Adventure Game"
+                                    onload="handleGameLoad(this)"
+                                    onerror="handleGameError(this)"></iframe>
+                            <div class="game-error-message" style="display: none;">
+                                <p>🎮 游戏加载中...</p>
+                                <p>如果游戏无法显示，请点击下方按钮尝试其他游戏源</p>
+                                <button onclick="loadAlternativeGame(this, 'platformer-adventure')" class="btn btn-secondary">尝试其他游戏源</button>
+                            </div>
+                        </div>
+                        
+                        <a href="platformer-adventure.html" class="btn">Play Full Game</a>
                     </article>
                 </div>
             </section>
@@ -153,6 +356,21 @@
                         <h2>🏃‍♀️ Endless Runners</h2>
                         <p class="game-description">Test your reflexes in fast-paced endless running games where speed and quick decisions are key to survival.</p>
                     </div>
+                    
+                    <div class="game-card">
+                        <h2>🚀 Space Adventures</h2>
+                        <p class="game-description">Pilot spacecraft and explore the cosmos in thrilling space action games with stunning visuals and epic battles.</p>
+                    </div>
+                    
+                    <div class="game-card">
+                        <h2>🧟‍♂️ Survival Horror</h2>
+                        <p class="game-description">Test your survival skills against zombies, monsters, and other threats in intense horror-action experiences.</p>
+                    </div>
+                    
+                    <div class="game-card">
+                        <h2>🥷 Stealth Action</h2>
+                        <p class="game-description">Use cunning and stealth to complete missions, avoid detection, and eliminate targets with precision.</p>
+                    </div>
                 </div>
             </section>
         </div>
@@ -168,6 +386,100 @@
 
     <!-- JavaScript功能 -->
     <script>
+        // 游戏备用链接
+        const gameAlternatives = {
+            'unity-action-adventure': [
+                'https://www.crazygames.com/embed/unity-action-adventure',
+                'https://games.poki.com/en/g/unity-action-adventure',
+                'https://www.y8.com/embed/unity_action_adventure'
+            ],
+            'fast-action-runner': [
+                'https://www.crazygames.com/embed/fast-action-runner',
+                'https://games.poki.com/en/g/fast-action-runner',
+                'https://www.y8.com/embed/fast_action_runner'
+            ],
+            'combat-arena': [
+                'https://www.crazygames.com/embed/combat-arena',
+                'https://games.poki.com/en/g/combat-arena',
+                'https://www.y8.com/embed/combat_arena'
+            ],
+            '3d-action-shooter': [
+                'https://www.crazygames.com/embed/3d-action-shooter',
+                'https://games.poki.com/en/g/3d-action-shooter',
+                'https://www.y8.com/embed/3d_action_shooter'
+            ],
+            'action-hero': [
+                'https://www.crazygames.com/embed/action-hero',
+                'https://games.poki.com/en/g/action-hero',
+                'https://www.y8.com/embed/action_hero'
+            ],
+            'ninja-warrior': [
+                'https://www.crazygames.com/embed/ninja-warrior',
+                'https://games.poki.com/en/g/ninja-warrior',
+                'https://www.y8.com/embed/ninja_warrior'
+            ],
+            'space-shooter': [
+                'https://www.crazygames.com/embed/space-shooter',
+                'https://games.poki.com/en/g/space-shooter',
+                'https://www.y8.com/embed/space_shooter'
+            ],
+            'battle-royale': [
+                'https://www.crazygames.com/embed/battle-royale',
+                'https://games.poki.com/en/g/battle-royale',
+                'https://www.y8.com/embed/battle_royale'
+            ],
+            'zombie-survival': [
+                'https://www.crazygames.com/embed/zombie-survival',
+                'https://games.poki.com/en/g/zombie-survival',
+                'https://www.y8.com/embed/zombie_survival'
+            ],
+            'platformer-adventure': [
+                'https://www.crazygames.com/embed/platformer-adventure',
+                'https://games.poki.com/en/g/platformer-adventure',
+                'https://www.y8.com/embed/platformer_adventure'
+            ]
+        };
+
+        // 游戏加载成功处理
+        function handleGameLoad(iframe) {
+            const errorMessage = iframe.parentElement.querySelector('.game-error-message');
+            if (errorMessage) {
+                errorMessage.style.display = 'none';
+            }
+            iframe.style.display = 'block';
+        }
+
+        // 游戏加载失败处理
+        function handleGameError(iframe) {
+            const errorMessage = iframe.parentElement.querySelector('.game-error-message');
+            if (errorMessage) {
+                errorMessage.style.display = 'block';
+            }
+            iframe.style.display = 'none';
+        }
+
+        // 加载备用游戏
+        function loadAlternativeGame(button, gameId) {
+            const gameCard = button.closest('.game-card');
+            const iframe = gameCard.querySelector('.game-preview');
+            const alternatives = gameAlternatives[gameId];
+            
+            if (alternatives && alternatives.length > 0) {
+                const alternativeUrl = alternatives[0];
+                iframe.src = alternativeUrl;
+                
+                button.textContent = '正在加载备用游戏...';
+                button.disabled = true;
+                
+                setTimeout(() => {
+                    button.textContent = '尝试其他游戏源';
+                    button.disabled = false;
+                }, 3000);
+            } else {
+                alert('暂时没有可用的备用游戏源，请稍后再试。');
+            }
+        }
+
         // 移动端菜单切换功能
         function toggleMenu() {
             const navMenu = document.getElementById('navMenu');
@@ -182,6 +494,22 @@
             if (!navMenu.contains(e.target) && !menuBtn.contains(e.target)) {
                 navMenu.classList.remove('active');
             }
+        });
+
+        // 页面加载完成后检查游戏加载状态
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                const iframes = document.querySelectorAll('.game-preview');
+                iframes.forEach(iframe => {
+                    try {
+                        if (iframe.contentDocument === null) {
+                            handleGameError(iframe);
+                        }
+                    } catch (e) {
+                        console.log('跨域访问限制，这是正常现象');
+                    }
+                });
+            }, 3000);
         });
     </script>
 </body>

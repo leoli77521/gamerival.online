@@ -48,8 +48,7 @@
                         <li><a href="puzzle-games.html">Puzzle Games</a></li>
                         <li><a href="sports-games.html">Sports Games</a></li>
                         <li><a href="action-games.html">Action Games</a></li>
-                        <li><a href="#shooting">Shooting Games</a></li>
-                        <li><a href="#strategy">Strategy Games</a></li>
+                        <li><a href="help.html">Help Center</a></li>
                     </ul>
                 </nav>
             </div>
@@ -81,7 +80,22 @@
                     <article class="game-card">
                         <h2>Boom Karts</h2>
                         <p class="game-description">Experience high-speed kart racing with explosive action and thrilling tracks. Race against opponents while collecting power-ups and avoiding obstacles in this adrenaline-pumping racing game.</p>
-                        <iframe class="game-preview" src="https://games.crazygames.com/en_US/boom-karts/index.html" loading="lazy" title="Boom Karts Game Preview"></iframe>
+                        
+                        <!-- 游戏预览区域 -->
+                        <div class="game-preview-container">
+                            <iframe class="game-preview" 
+                                    src="https://games.crazygames.com/en_US/boom-karts/index.html" 
+                                    loading="lazy" 
+                                    title="Boom Karts Game Preview"
+                                    onload="handleGameLoad(this)"
+                                    onerror="handleGameError(this)"></iframe>
+                            <div class="game-error-message" style="display: none;">
+                                <p>🎮 游戏加载中...</p>
+                                <p>如果游戏无法显示，请点击下方按钮尝试其他游戏源</p>
+                                <button onclick="loadAlternativeGame(this, 'boom-karts')" class="btn btn-secondary">尝试其他游戏源</button>
+                            </div>
+                        </div>
+                        
                         <a href="boom-karts.html" class="btn">Play Full Game</a>
                     </article>
 
@@ -89,7 +103,22 @@
                     <article class="game-card">
                         <h2>Empire City</h2>
                         <p class="game-description">Build and manage your own metropolitan empire in this engaging city-building strategy game. Plan urban development, manage resources, and create the ultimate modern cityscape.</p>
-                        <iframe class="game-preview" src="https://games.crazygames.com/en_US/empire-city/index.html" loading="lazy" title="Empire City Game Preview"></iframe>
+                        
+                        <!-- 游戏预览区域 -->
+                        <div class="game-preview-container">
+                            <iframe class="game-preview" 
+                                    src="https://games.crazygames.com/en_US/empire-city/index.html" 
+                                    loading="lazy" 
+                                    title="Empire City Game Preview"
+                                    onload="handleGameLoad(this)"
+                                    onerror="handleGameError(this)"></iframe>
+                            <div class="game-error-message" style="display: none;">
+                                <p>🎮 游戏加载中...</p>
+                                <p>如果游戏无法显示，请点击下方按钮尝试其他游戏源</p>
+                                <button onclick="loadAlternativeGame(this, 'empire-city')" class="btn btn-secondary">尝试其他游戏源</button>
+                            </div>
+                        </div>
+                        
                         <a href="empire-city.html" class="btn">Play Full Game</a>
                     </article>
 
@@ -97,7 +126,22 @@
                     <article class="game-card">
                         <h2>Basketball Superstars</h2>
                         <p class="game-description">Dominate the basketball court in this exciting sports game featuring realistic gameplay, amazing graphics, and competitive matches against skilled opponents.</p>
-                        <iframe class="game-preview" src="https://games.crazygames.com/en_US/basketball-superstars/index.html" loading="lazy" title="Basketball Superstars Game Preview"></iframe>
+                        
+                        <!-- 游戏预览区域 -->
+                        <div class="game-preview-container">
+                            <iframe class="game-preview" 
+                                    src="https://games.crazygames.com/en_US/basketball-superstars/index.html" 
+                                    loading="lazy" 
+                                    title="Basketball Superstars Game Preview"
+                                    onload="handleGameLoad(this)"
+                                    onerror="handleGameError(this)"></iframe>
+                            <div class="game-error-message" style="display: none;">
+                                <p>🎮 游戏加载中...</p>
+                                <p>如果游戏无法显示，请点击下方按钮尝试其他游戏源</p>
+                                <button onclick="loadAlternativeGame(this, 'basketball-superstars')" class="btn btn-secondary">尝试其他游戏源</button>
+                            </div>
+                        </div>
+                        
                         <a href="basketball-superstars.html" class="btn">Play Full Game</a>
                     </article>
                 </div>
@@ -147,6 +191,23 @@
                     </div>
                 </div>
             </section>
+
+            <!-- 故障排除信息 -->
+            <section class="troubleshooting-section">
+                <h2>遇到问题？</h2>
+                <div class="game-card">
+                    <h2>🔧 常见问题解决方案</h2>
+                    <p class="game-description"><strong>游戏无法加载？</strong> 请尝试刷新页面或检查网络连接。某些游戏可能需要良好的网络环境。</p>
+                    <p class="game-description"><strong>显示"找不到合理片段"？</strong> 这通常是网络连接问题。请尝试：</p>
+                    <ul style="margin-left: 20px; color: #494949;">
+                        <li>刷新页面</li>
+                        <li>检查网络连接</li>
+                        <li>尝试不同的浏览器</li>
+                        <li>清除浏览器缓存</li>
+                    </ul>
+                    <p class="game-description"><strong>手机上游戏体验不佳？</strong> 建议使用最新版本的Chrome或Safari浏览器以获得最佳体验。</p>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -160,6 +221,70 @@
 
     <!-- JavaScript功能 -->
     <script>
+        // 游戏备用链接
+        const gameAlternatives = {
+            'boom-karts': [
+                'https://www.crazygames.com/embed/boom-karts',
+                'https://games.poki.com/en/g/boom-karts',
+                'https://www.y8.com/embed/boom_karts'
+            ],
+            'empire-city': [
+                'https://www.crazygames.com/embed/empire-city',
+                'https://games.poki.com/en/g/empire-city',
+                'https://www.y8.com/embed/empire_city'
+            ],
+            'basketball-superstars': [
+                'https://www.crazygames.com/embed/basketball-superstars',
+                'https://games.poki.com/en/g/basketball-superstars',
+                'https://www.y8.com/embed/basketball_superstars'
+            ]
+        };
+
+        // 游戏加载成功处理
+        function handleGameLoad(iframe) {
+            // 游戏加载成功，隐藏错误消息
+            const errorMessage = iframe.parentElement.querySelector('.game-error-message');
+            if (errorMessage) {
+                errorMessage.style.display = 'none';
+            }
+            iframe.style.display = 'block';
+        }
+
+        // 游戏加载失败处理
+        function handleGameError(iframe) {
+            // 显示错误消息
+            const errorMessage = iframe.parentElement.querySelector('.game-error-message');
+            if (errorMessage) {
+                errorMessage.style.display = 'block';
+            }
+            iframe.style.display = 'none';
+        }
+
+        // 加载备用游戏
+        function loadAlternativeGame(button, gameId) {
+            const gameCard = button.closest('.game-card');
+            const iframe = gameCard.querySelector('.game-preview');
+            const alternatives = gameAlternatives[gameId];
+            
+            if (alternatives && alternatives.length > 0) {
+                // 尝试第一个备用链接
+                const alternativeUrl = alternatives[0];
+                iframe.src = alternativeUrl;
+                
+                // 更新按钮文本
+                button.textContent = '正在加载备用游戏...';
+                button.disabled = true;
+                
+                // 3秒后恢复按钮
+                setTimeout(() => {
+                    button.textContent = '尝试其他游戏源';
+                    button.disabled = false;
+                }, 3000);
+            } else {
+                alert('暂时没有可用的备用游戏源，请稍后再试。');
+            }
+        }
+
         // 移动端菜单切换功能
         function toggleMenu() {
             const navMenu = document.getElementById('navMenu');
@@ -171,33 +296,33 @@
             const searchTerm = document.getElementById('searchInput').value.toLowerCase().trim();
             
             if (searchTerm === '') {
-                alert('Please enter a game name or keyword to search.');
+                alert('请输入游戏名称或关键词进行搜索。');
                 return;
             }
 
             // 简单的搜索逻辑 - 重定向到相关游戏页面
-            if (searchTerm.includes('boom') || searchTerm.includes('kart')) {
+            if (searchTerm.includes('boom') || searchTerm.includes('kart') || searchTerm.includes('卡丁车')) {
                 window.location.href = 'boom-karts.html';
-            } else if (searchTerm.includes('empire') || searchTerm.includes('city')) {
+            } else if (searchTerm.includes('empire') || searchTerm.includes('city') || searchTerm.includes('城市')) {
                 window.location.href = 'empire-city.html';
-            } else if (searchTerm.includes('basketball') || searchTerm.includes('sport')) {
+            } else if (searchTerm.includes('basketball') || searchTerm.includes('sport') || searchTerm.includes('篮球')) {
                 window.location.href = 'basketball-superstars.html';
-            } else if (searchTerm.includes('unity') || searchTerm.includes('adventure')) {
+            } else if (searchTerm.includes('unity') || searchTerm.includes('adventure') || searchTerm.includes('冒险')) {
                 window.location.href = 'unity-action-adventure.html';
-            } else if (searchTerm.includes('runner') || searchTerm.includes('fast')) {
+            } else if (searchTerm.includes('runner') || searchTerm.includes('fast') || searchTerm.includes('跑酷')) {
                 window.location.href = 'fast-action-runner.html';
-            } else if (searchTerm.includes('combat') || searchTerm.includes('arena') || searchTerm.includes('fighting')) {
+            } else if (searchTerm.includes('combat') || searchTerm.includes('arena') || searchTerm.includes('fighting') || searchTerm.includes('格斗')) {
                 window.location.href = 'combat-arena.html';
-            } else if (searchTerm.includes('shooter') || searchTerm.includes('3d') || searchTerm.includes('shooting')) {
+            } else if (searchTerm.includes('shooter') || searchTerm.includes('3d') || searchTerm.includes('shooting') || searchTerm.includes('射击')) {
                 window.location.href = '3d-action-shooter.html';
-            } else if (searchTerm.includes('puzzle')) {
+            } else if (searchTerm.includes('puzzle') || searchTerm.includes('益智')) {
                 window.location.href = 'puzzle-games.html';
-            } else if (searchTerm.includes('sports')) {
+            } else if (searchTerm.includes('sports') || searchTerm.includes('体育')) {
                 window.location.href = 'sports-games.html';
-            } else if (searchTerm.includes('action')) {
+            } else if (searchTerm.includes('action') || searchTerm.includes('动作')) {
                 window.location.href = 'action-games.html';
             } else {
-                alert('Game not found. Try searching for: Boom Karts, Empire City, Basketball, Unity Adventure, Combat Arena, 3D Shooter, or game categories like Action, Puzzle, Sports.');
+                alert('未找到相关游戏。请尝试搜索：Boom Karts、Empire City、Basketball、Unity Adventure、Combat Arena、3D Shooter，或游戏分类如：Action（动作）、Puzzle（益智）、Sports（体育）。');
             }
         }
 
@@ -216,6 +341,26 @@
             if (!navMenu.contains(e.target) && !menuBtn.contains(e.target)) {
                 navMenu.classList.remove('active');
             }
+        });
+
+        // 页面加载完成后检查游戏加载状态
+        document.addEventListener('DOMContentLoaded', function() {
+            // 延迟检查游戏加载状态
+            setTimeout(() => {
+                const iframes = document.querySelectorAll('.game-preview');
+                iframes.forEach(iframe => {
+                    // 检查iframe是否加载成功
+                    try {
+                        if (iframe.contentDocument === null) {
+                            // iframe可能被阻止加载
+                            handleGameError(iframe);
+                        }
+                    } catch (e) {
+                        // 跨域错误，这是正常的，游戏应该能正常显示
+                        console.log('跨域访问限制，这是正常现象');
+                    }
+                });
+            }, 3000);
         });
     </script>
 </body>
